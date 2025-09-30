@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ky4hmegjycbt"]
+
+[ext_resource type="Script" uid="uid://bd5xhyewfhu0i" path="res://note.gd" id="1_doocs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf3o7"]
+
+[node name="Note" type="RigidBody2D"]
+script = ExtResource("1_doocs")
+note_name = "A"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rf3o7")
+debug_color = Color(0, 1, 0, 1)
