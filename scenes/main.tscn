@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbgou7kgwujkh"]
 
 [ext_resource type="PackedScene" uid="uid://balt3brmvb83y" path="res://scenes/player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://ky4hmegjycbt" path="res://scenes/note.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://6ut81dr3m3dy" path="res://scenes/note_synth.tscn" id="2_0wfyh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0wfyh"]
 normal = Vector2(1, 0)
@@ -18,9 +18,6 @@ normal = Vector2(0, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(174, 158)
-
-[node name="Note" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(232, 116)
 
 [node name="Boundaries" type="Node" parent="."]
 
@@ -51,3 +48,14 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/TopBoundary"]
 shape = SubResource("WorldBoundaryShape2D_tbgi4")
+
+[node name="NoteSynth" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(331, 191)
+
+[node name="NoteSynth2" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(410, 241)
+pitch = 4
+
+[node name="NoteSynth3" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(245, 275)
+pitch = 7
