@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ky4hmegjycbt"]
+
+[ext_resource type="Script" uid="uid://bd5xhyewfhu0i" path="res://scripts/note.gd" id="1_doocs"]
+[ext_resource type="AudioStream" uid="uid://notsa6gygivr" path="res://assets/A.wav" id="2_1bnk6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf3o7"]
+
+[node name="Note" type="RigidBody2D"]
+script = ExtResource("1_doocs")
+note_name = "A"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rf3o7")
+debug_color = Color(0, 1, 0, 1)
+
+[node name="NoteSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1bnk6")
+
+[node name="NoteLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "A"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co8n0bhf2v0fv"]
+
+[ext_resource type="Script" uid="uid://cmit1yjswkubl" path="res://scenes/sine_wave_test.gd" id="1_cda7c"]
+
+[node name="SineWaveTest" type="Node2D"]
+script = ExtResource("1_cda7c")
